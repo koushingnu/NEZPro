@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "nez-website"
+  },
+  "targets": {
+    "nez-website": {
+      "hosting": {
+        "recruiting": [
+          "recruiting.web-notequalzero.com"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

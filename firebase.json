@@ -1,0 +1,71 @@
+{
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default"
+    },
+    {
+      "source": "hotelcleaning",
+      "codebase": "hotelcleaning",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint",
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ]
+    }
+  ],
+  "hosting": [
+    {
+      "site": "nez-website",
+      "public": "public",
+      "cleanURLs": true,
+      "rewrites": [
+        {
+          "source": "/company",
+          "destination": "/company.html"
+        },
+        {
+          "source": "/confirm",
+          "destination": "/comfirm.html"
+        },
+        {
+          "source": "/contact",
+          "destination": "/contact.html"
+        },
+        {
+          "source": "/form",
+          "destination": "/form.html"
+        },
+        {
+          "source": "/works",
+          "destination": "/works.html"
+        },
+        {
+          "source": "/security_test",
+          "destination": "security_test.html"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "site": "nez-website-recruiting",
+      "public": "job",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
