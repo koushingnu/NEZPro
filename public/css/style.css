@@ -8,6 +8,10 @@
 ---------------------------------------------------------------------------*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 
+/*Google Fontsの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+
 /*テンプレート専用cssファイルの読み込み
 ---------------------------------------------------------------------------*/
 @import url("animation.css");
@@ -24,9 +28,7 @@ body {
 }
 
 body {
-  font-family:
-    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
-    Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; /*フォント種類*/
+  font-family: "Noto Sans JP", sans-serif; /*フォント種類*/
   -webkit-text-size-adjust: none;
   background: #111; /*背景色*/
   color: #fff; /*全体の文字色*/
